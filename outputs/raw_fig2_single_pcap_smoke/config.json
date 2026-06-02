@@ -1,0 +1,45 @@
+{
+  "args": {
+    "manifest": null,
+    "pcap_dir": "14727250\\result_1_1\\pcap\\3lift_com.pcap",
+    "label_col": "label",
+    "label_from": "filename",
+    "out_dir": "outputs\\raw_fig2_single_pcap_smoke",
+    "dataset_name": "14727250_smoke",
+    "top_m_flows": 2,
+    "max_events": 8,
+    "flow_rank_by": "bytes_total",
+    "feature_set": "default",
+    "model": "logistic_regression",
+    "seed": 0,
+    "seeds": [
+      0
+    ],
+    "n_estimators": 300,
+    "max_depth": "none",
+    "test_size": 0.25,
+    "group_split_by": null,
+    "k_list": [
+      1,
+      2
+    ],
+    "tail_shift_left": false,
+    "scaler": "standard",
+    "log_transform": [
+      "length",
+      "pkt_count",
+      "duration",
+      "relative_timestamp"
+    ],
+    "use_cache": false,
+    "overwrite_cache": false,
+    "num_workers": 1,
+    "workspace": null,
+    "no_buffer_tcp": false,
+    "no_dns": false,
+    "with_certificates": false,
+    "allow_sensitive_metadata_output": false
+  },
+  "timestamp_utc": "2026-06-01T15:44:47.689567+00:00",
+  "git_commit": null
+}

@@ -1,0 +1,47 @@
+# ============================================================
+# 网站指纹识别实验 — Python 依赖清单
+# 项目: wf-ana
+# 基于: "Understanding Web Fingerprinting with a Protocol-Centric Approach" (RAID 2024)
+#
+# 安装方式:
+#   pip install -r requirements.txt
+#
+# 注意: PyTorch (torch) 体积较大 (~150MB CPU / ~2GB CUDA)。
+#       如果只跑传统 ML (XGBoost/RF/KNN/LR)，可注释掉 torch 相关行。
+# ============================================================
+
+# ---- 核心数据处理 ----
+numpy                      # 数值计算、数据 padding
+pandas                     # 标签清理、类别统计、DataFrame 操作
+
+# ---- PCAP 解析 (process_result_1_1.py) ----
+pyshark                    # tshark Python 封装，PCAP → 结构化数据
+scapy                      # 网络包操作（FlowSession 内部引用）
+loguru                     # 结构化日志
+
+# ---- 传统机器学习模型 ----
+scikit-learn               # RandomForest / KNN / LogisticRegression / 交叉验证 / 指标计算
+xgboost                    # XGBoost 梯度提升树
+catboost                   # CatBoost 梯度提升（备用）
+matplotlib                 # Figure-2-style 曲线图输出
+tqdm                       # 长时间 PCAP 处理进度显示（可选）
+
+# ---- 深度学习模型 ----
+# torch                      # PyTorch 后端，MLP/Transformer/VAE 等神经网络
+torchvision                # PyTorch 辅助工具
+monai                      # 医学影像 AI 框架（本项目用于时序数据预处理）
+tsai                       # 时间序列深度学习库 (InceptionTime 等 backbone)
+
+# ---- 工具库 ----
+pydantic                   # evaluate_classifier 的参数校验装饰器
+cloudpickle                # 模型序列化/反序列化
+
+# ---- 浏览器自动化（process_result_1_1.py 未直接使用，tls-crawler 包声明） ----
+selenium                   # Selenium WebDriver
+
+# ============================================================
+# 系统依赖（非 pip 包，需单独安装）:
+#   tshark — Wireshark 命令行工具
+#   下载: https://www.wireshark.org/download.html
+#   安装时勾选 "Install TShark"
+# ============================================================

@@ -1,0 +1,45 @@
+{
+  "args": {
+    "manifest": "outputs\\raw_fig2_smoke_manifest.csv",
+    "pcap_dir": null,
+    "label_col": "label",
+    "label_from": "parent_dir",
+    "out_dir": "outputs\\raw_fig2_parallel_smoke",
+    "dataset_name": "parallel_smoke",
+    "top_m_flows": 2,
+    "max_events": 8,
+    "flow_rank_by": "bytes_total",
+    "feature_set": "default",
+    "model": "logistic_regression",
+    "seed": 0,
+    "seeds": [
+      0
+    ],
+    "n_estimators": 300,
+    "max_depth": "none",
+    "test_size": 0.25,
+    "group_split_by": null,
+    "k_list": [
+      1
+    ],
+    "tail_shift_left": false,
+    "scaler": "standard",
+    "log_transform": [
+      "length",
+      "pkt_count",
+      "duration",
+      "relative_timestamp"
+    ],
+    "use_cache": false,
+    "overwrite_cache": true,
+    "num_workers": 2,
+    "no_progress": false,
+    "workspace": null,
+    "no_buffer_tcp": false,
+    "no_dns": false,
+    "with_certificates": false,
+    "allow_sensitive_metadata_output": false
+  },
+  "timestamp_utc": "2026-06-01T15:59:26.822893+00:00",
+  "git_commit": null
+}

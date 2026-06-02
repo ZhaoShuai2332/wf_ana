@@ -1,0 +1,22 @@
+{
+  "num_visits": 4,
+  "num_classes": 2,
+  "class_distribution": {
+    "3lift": 2,
+    "adriver": 2
+  },
+  "num_parsed_success": 4,
+  "num_parsed_failed": 0,
+  "top_m_flows": 2,
+  "max_events": 8,
+  "feature_names": [
+    "relative_timestamp",
+    "duration",
+    "length",
+    "pkt_count",
+    "direction"
+  ],
+  "flow_rank_by": "bytes_total",
+  "mean_num_flows_per_visit": 32.75,
+  "mean_num_events_per_flow": 19.5
+}
